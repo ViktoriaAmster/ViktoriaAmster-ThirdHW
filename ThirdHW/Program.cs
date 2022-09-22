@@ -43,18 +43,57 @@
 
 // Напишите программу, которая принимает на вход координаты двух точек 
 // и находит расстояние между ними в 3D пространстве.
-Console.WriteLine("Введите координату Х первой точки: ");
-int x1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координату y первой точки: ");
-int y1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координату Z первой точки: ");
-int z1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координату Х второй точки: ");
-int x2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координату Y второй точки: ");
-int y2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координату Z второй точки: ");
-int z2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координату Х первой точки: ");
+// int x1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координату y первой точки: ");
+// int y1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координату Z первой точки: ");
+// int z1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координату Х второй точки: ");
+// int x2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координату Y второй точки: ");
+// int y2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координату Z второй точки: ");
+// int z2 = Convert.ToInt32(Console.ReadLine());
 
-double D = Math.Sqrt(Math.Pow(x1 - x2,2) + Math.Pow(y1 - y2,2) + Math.Pow(z1 - z2,2));
-Console.WriteLine($"Расстояние равно {Math.Round(D,2)}");
+// double D = Math.Sqrt(Math.Pow(x1 - x2,2) + Math.Pow(y1 - y2,2) + Math.Pow(z1 - z2,2));
+// Console.WriteLine($"Расстояние равно {Math.Round(D,2)}");
+
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+Console.WriteLine("Введите целое число, которое больше или равно 1: ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+void FillArr(int[] collection)
+{
+    int length = N;
+    int index = 0;
+    while (index < length)
+    {
+        collection[index] = index + 1;
+        index++;
+    }
+}
+
+void PrintArr(int[] collection)
+{
+    int length = N;
+    int index = 0;
+    while (index < length)
+    {
+        Console.Write($"{Math.Pow(collection[index],3)} ");
+        index++;
+    }
+}
+
+if (N >= 1)
+{
+    int[] arr = new int[N];
+    FillArr(arr);
+    PrintArr(arr);
+}
+else 
+{
+   Console.WriteLine("Ну я же просила!!!"); 
+}
